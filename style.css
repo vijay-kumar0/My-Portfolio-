@@ -679,3 +679,72 @@ section {
 link.hover{
     text-decoration: underline;
 }
+/* ================= FINAL MOBILE FIX ================= */
+@media (max-width: 768px) {
+
+  /* Main layout fix */
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  /* Fix content width */
+  .content {
+    width: 100%;
+  }
+
+  /* Fix text */
+  .content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .typewriter {
+    font-size: 18px;
+  }
+
+  .content p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 10px;
+  }
+
+  /* Fix image */
+  .image {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .image img {
+    width: 160px;
+    height: 160px;
+    max-width: none;   /* IMPORTANT */
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Fix social icons */
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .social-links a i {
+    margin: 0;
+  }
+
+  /* Fix button */
+  .btn-download {
+    display: block;
+    width: 80%;
+    max-width: 280px;
+    margin: 25px auto;
+    text-align: center;
+    justify-content: center;
+  }
+}

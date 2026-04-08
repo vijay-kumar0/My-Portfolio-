@@ -719,11 +719,16 @@ link.hover{
   }
 
   .image img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     max-width: none;   /* IMPORTANT */
     display: block;
     margin: 0 auto;
+
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #00adb5;
+    box-shadow: 0 0 15px rgba(0,173,181,0,6),0 30px rgba( 0.0.0.0.3);
   }
 
   /* Fix social icons */

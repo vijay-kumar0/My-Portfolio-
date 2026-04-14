@@ -9,32 +9,33 @@
 </head>
 <body>
 
+   
     <nav>
-        <div class="nav-container">
-            <div class="Logo">VIJAY KUMAR<span></span></div>
-            <div class="links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skill</a>
-                <a href="#projects">Projects</a>
-                <a href="#certificats">Certificats</a>
-                <a href="#contact" class="btn">Contact</a>
-            </div>
-            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    <div class="nav-container">
+        <div class="Logo">VIJAY KUMAR</div>
+
+        <div class="links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skill</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificats">Certificats</a>
+            <a href="#contact">Contact</a>
         </div>
-        
-        <div class="dropdown">
-            <div class="links">
-                <a href="#home" onclick="cancel()">Home</a>
-                <a href="#about" onclick="cancel()">About Me</a>
-                <a href="#skill" onclick="cancel()">Skill</a>
-                <a href="#projects" onclick="cancel()">Projects</a>
-                <a href="#certificats" onclick="cancel()">certificats</a>
-                <a href="#contact" onclick="cancel()">Contact</a>
-                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
-            </div>
-        </div>
-    </nav>
+
+        <i class="fa-solid fa-bars hamburg"></i>
+    </div>
+
+    <!-- FIXED DROPDOWN -->
+    <div class="dropdown">
+        <a href="#home">Home</a>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skill</a>
+        <a href="#projects">Projects</a>
+        <a href="#certificats">Certificats</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
 
 
     <section id="home">
@@ -200,9 +201,9 @@
             <div class="cert-card">
                 <div class="cert-icon"><i class="fa-solid fa-award"></i></div>
                 <div class="cert-info">
-                    <h3>TCS ION Career Edge - Young Professional</h3>
+                    <h3>Git & GitHub – The Practical Guide</h3>
                     <span class="cert-issuer">Plateforme : TCS ION</span>
-                    <p>Developed communication, problem-solving, and workplace readiness skills for professional career growth.</p>
+                    <p>Completed the Git & GitHub – The Practical Guide course, focusing on practical version control and real-world development workflows.</p>
                     <a href="#" target="_blank"class="cert-btn">View Cirtificate</a>
                 </div>
             </div>
@@ -271,8 +272,9 @@
     
 
 
-    <section id="contact">
+        <section id="contact">
         <h2 class="section-title">Contact Info</h2>
+       <!-- LEFT -->
         <div class="contact-info">
             <a href="mailto:imvksdr@gmail.com">
                 <i class="fa-solid fa-envelope"></i> imvksdr@gmail.com
@@ -289,63 +291,21 @@
             <a href="#">
                 <i class="fa-solid fa-location-dot"></i> Siddharth Nagar,UP
             </a>
-            <a href="https://forms.gle/1KeaifwezDHeWiZ68" target="_blank" class="form-btn">
-               Fill Contact Form
-            </a>
         </div>
-    </section>
+        <!-- RIGHT -->
+         <div class="contact-form">
+  <form action="https://formspree.io/f/mdaynevp" method="POST" class="contact-form">
 
-    <script>
-        const text = document.querySelector(".text");
-        const txt = ["Full Stack Developer","Problem-Solving"];
+  <input type="text" name="name" placeholder="Your Name" required>
+
+  <input type="email" name="email" placeholder="Your Email" required>
+
+  <textarea name="message" placeholder="Your Message" required></textarea>
+
+  <button type="submit">Send Message</button></form>
         
-        let i = 0;
-        let timer;
-
-        function typingEffect() {
-            let word = txt[i].split("");
-            var loopTyping = function() {
-                if (word.length > 0) {
-                    text.innerHTML += word.shift();
-                } else {
-                    setTimeout(deletingEffect, 2000);
-                    return false;
-                }
-                timer = setTimeout(loopTyping, 100);
-            };
-            loopTyping();
-        }
-
-        function deletingEffect() {
-            let word = txt[i].split("");
-            var loopDeleting = function() {
-                if (word.length > 0) {
-                    word.pop();
-                    text.innerHTML = word.join("");
-                } else {
-                    if (txt.length > (i + 1)) {
-                        i++;
-                    } else {
-                        i = 0;
-                    }
-                    typingEffect();
-                    return false;
-                }
-                timer = setTimeout(loopDeleting, 50);
-            };
-            loopDeleting();
-        }
-
-        typingEffect();
-
-        function hamburg(){
-            const navbar = document.querySelector(".dropdown");
-            navbar.style.transform = "translateY(0px)";
-        }
-        function cancel(){
-            const navbar = document.querySelector(".dropdown");
-            navbar.style.transform = "translateY(-100%)";
-        }
-    </script>
+    </div>
+    </section>
+    <script src="script.js"></script>
 </body>
 </html>
